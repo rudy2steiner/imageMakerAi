@@ -91,16 +91,16 @@ const ImageDetails = ({ generation }: any) => {
             setOpenLogin(true);
             return false;
         }
-        setDownLoading(true);
+        //setDownLoading(true);
         // window.open(generation.url, "_blank");
         //onDownloadR2(
         //    generation.url.replace(/https:\/\/[^\/]+(\/)*/, ""),
         //    () => {
-                setDownLoading(false);
+        //        setDownLoading(false);
         //    }
         //);
         onDownload(generation.url, onDownloaded);
-        setDownLoading(false);
+        //setDownLoading(false);
         //onDownload(`fluximageai/generated/CQHex-1a.jpg`)
     };
 
@@ -165,8 +165,8 @@ const ImageDetails = ({ generation }: any) => {
                         <div className="absolute bottom-4 end-4">
                             <div className="gen-image-toolbars flex">
                                 <ImageToolbar
-                                    // imgUrl={generation.url}
-                                    imgUrl="https://images.unsplash.com/photo-1680193895115-b51b4ed5392f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                                    imgUrl={generation.url}
+                                    // imgUrl="https://images.unsplash.com/photo-1680193895115-b51b4ed5392f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
                                     handleDownload={handleDownload}
                                     handleMaximize={handleMaximize}
                                     disabledDownload={false}

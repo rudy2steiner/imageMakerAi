@@ -18,6 +18,8 @@ import { Icons } from "@/components/Icons";
 import { usePrediction } from "@/hooks/usePrediction";
 import { Spinner } from "@/components/Spinner";
 import LoginDialog from "@/components/LoginBox/LoginDialog";
+import { handleUpdatePublic } from "@/services/handleClient";
+
 import {
     cn,
     getMachineId,
@@ -70,12 +72,12 @@ const ImageDetails = ({ generation }: any) => {
     const [model, setModel] = useState([
         { label: "flux.1 schnell", value: "schnell", selected: true },
     ]);
-    const [isPublic, setIsPublic] = useState(true);
+    const [isPublic, setIsPublic] = useState(generation.isPublic);
     const pathname = usePathname();
     const { user } = useContext(AppContext);
     
     const t = useTranslations("Generation");
-
+    const owner = user!==null && user.id == generation.userId;
     useLayoutEffect(() => {
         if (leftElementRef.current) {
             setElementHeight(leftElementRef.current.clientHeight);
@@ -91,13 +93,25 @@ const ImageDetails = ({ generation }: any) => {
         }
         setDownLoading(true);
         // window.open(generation.url, "_blank");
-        onDownloadR2(
-            generation.url.replace(/https:\/\/[^\/]+(\/)*/, ""),
-            () => {
+        //onDownloadR2(
+        //    generation.url.replace(/https:\/\/[^\/]+(\/)*/, ""),
+        //    () => {
                 setDownLoading(false);
-            }
-        );
-        // onDownload(`fluximageai/generated/CQHex-1a.jpg`)
+        //    }
+        //);
+        onDownload(generation.url, onDownloaded);
+        setDownLoading(false);
+        //onDownload(`fluximageai/generated/CQHex-1a.jpg`)
+    };
+
+    const updatePublic = async (value: boolean) => {
+        console.log('public', value);
+        console.log('generation id', generation.id);
+        try {
+            await handleUpdatePublic(generation.id, value);
+            setIsPublic(value);
+        } catch (error: any) {
+        }
     };
 
     const handleMaximize = (shouldZoom: boolean) => {
@@ -115,6 +129,7 @@ const ImageDetails = ({ generation }: any) => {
         copy();
         toast.success("Copied!");
     }
+    const [enabled, setEnabled] = useState(false)
 
     return (
         <>
@@ -150,11 +165,11 @@ const ImageDetails = ({ generation }: any) => {
                         <div className="absolute bottom-4 end-4">
                             <div className="gen-image-toolbars flex">
                                 <ImageToolbar
-                                    imgUrl={generation.url}
-                                    // imgUrl="https://images.unsplash.com/photo-1680193895115-b51b4ed5392f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                                    // imgUrl={generation.url}
+                                    imgUrl="https://images.unsplash.com/photo-1680193895115-b51b4ed5392f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
                                     handleDownload={handleDownload}
                                     handleMaximize={handleMaximize}
-                                    disabledDownload={true}
+                                    disabledDownload={false}
                                     disabledShare={true}
                                 />
                             </div>
@@ -218,6 +233,33 @@ const ImageDetails = ({ generation }: any) => {
                                 {generation.aspect_ratio}
                             </p>
                         </div>
+                        { owner ?(<div className="space-y-2">
+                              <label
+                                  htmlFor="prompts"
+                                  className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200"
+                              >
+                                  {t("formPublicLabel")}
+                              </label>
+
+                              <div className="grid sm:grid-cols-5 gap-2">
+                                  <input
+                                      type="checkbox"
+                                      id="hs-basic-usage"
+                                      className="relative w-[3.25rem] h-7 p-px bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-blue-600 checked:border-blue-600 focus:checked:border-blue-600 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-600 before:inline-block before:size-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-neutral-400 dark:checked:before:bg-blue-200"
+                                      checked={isPublic}
+                                      onChange={(e: any) => {
+                                          updatePublic(e.target.checked);
+                                      }}
+                                  />
+                                  <label
+                                      htmlFor="hs-basic-usage"
+                                      className="sr-only"
+                                  >
+                                      switch
+                                  </label>
+                              </div>
+                          </div>):(<></> )}
+
 
                         {/* Button Group */}
                         <div className="space-y-4">

@@ -1,8 +1,8 @@
 export const siteConfig: any = {
-  name: "ImagenWorks",
-  url: process.env.NEXTAUTH_URL || "https://imagenWorks.com",
-  domain: "imagenWorks.com",
-  mail: "support@imagenWorks.org",
+  name: "Image Maker Ai",
+  url: process.env.NEXTAUTH_URL || "https://imagemakerai.co",
+  domain: "imagemakerai.co",
+  mail: "support@imagemakerai.co",
   effectiveDate: "2024.8.9"
 };
 

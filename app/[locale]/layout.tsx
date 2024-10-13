@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: any) {
     const t = await getTranslations("Home");
 
     return {
-        title: "Flux AI Image Generator - Free Image Generator | imagenWorks.com",
+        title: "Flux AI Image Generator - Free Image Generator | imagemakerai.co",
         description: t("layoutDescription"),
         icons: {
             icon: "/favicon.ico",

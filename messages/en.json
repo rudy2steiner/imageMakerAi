@@ -1,7 +1,7 @@
 {
     "Home": {
         "layoutTitle": "Text to Image Maker Ai | ImageMakerAi.co",
-        "layoutDescription": "Exploring the advanced image generate ai models: Flux pro, Flux dev, Flux schnell, the image maker AI turns your text descriptions into stunning, unique images. Make art images,photos free online.",
+        "layoutDescription": "Exploring the advanced image generate ai models: Flux pro, Flux dev, Flux schnell, the image maker AI turns your text descriptions into stunning, unique images. Make art images, banner images, anime images, photos free online.",
         "pageDescription": "With Image Maker Ai, crafting high-quality, royalty-free images from simple text prompts has never been easier. Join the forefront of digital art and design with our advanced AI platform.",
         "hero": {
             "title": "Flux Pro Powered Image Maker AI",
@@ -186,17 +186,17 @@
         "banner": "Image Maker AI Free Playground might be slow or not work sometimes due to high demand. If nothing happens after waiting, please go to"
     },
     "Generation": {
-        "layoutTitle": "Image Maker AI Image Generator - FLUX.1 [Pro], [Dev], [Schnell] | Flux Image AI",
+        "layoutTitle": "Image Maker AI - FLUX.1 [Pro], [Dev], [Schnell] | Flux Image AI",
         "layoutDescription": "Explore the powerful features of Flux AI, Get started with Flux AI's image generator and bring your ideas to life.",
-        "pageTitle": "Image Maker AI Image Generator",
-        "pageDescription": "transforms your text descriptions into stunning image",
+        "pageTitle": "Image Maker Ai",
+        "pageDescription": "Turn your text descriptions into stunning image",
         "formPromptsLabel": "Create a image from text prompt",
         "formPromptsPlaceholer": "Enter your image prompt here...",
         "formRatioLabel": "Aspect Ratio",
         "formModelsLabel": "Model",
         "formPublicLabel": "Public",
         "formResultLabel": "Generated image",
-        "applicationsTitle": "Applications of Flux AI",
+        "applicationsTitle": "Applications of Image Maker AI",
         "applications": {
             "length": "4",
             "1": {

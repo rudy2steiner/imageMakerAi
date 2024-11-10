@@ -45,7 +45,12 @@ const Navs: any[] = [
                 href: "https://jsonhome.com",
                 title: "JSON editor,formatter,comparator",
                 content: "JSON online",
-            }
+            },
+              {
+                  href: "https://aiwith.me",
+                  title: "Woy AI Directory",
+                  content: "AI With Me ",
+              }
         ],
     },
 ];

@@ -50,7 +50,7 @@ create tables and migrate:
 
 ```
 npx prisma generate
-prisma migrate dev
+npx prisma migrate dev
 ```
 #### Auth config(optional)
 * github auth

@@ -29,7 +29,7 @@ const FooterSection = () => {
                                             href={el.href}
                                             className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                                             title={el.title}
-                                            rel="nofollow"
+                                            rel="dofollow"
                                         >
                                             {el.content || el.title}
                                         </a>

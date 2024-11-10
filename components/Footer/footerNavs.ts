@@ -48,9 +48,14 @@ const Navs: any[] = [
             },
               {
                   href: "https://aiwith.me",
-                  title: "Woy AI Directory",
+                  title: "aiwith",
                   content: "AI With Me ",
-              }
+              },
+               {
+                    href: "https://www.aitoolnet.com",
+                    title: "aitoolnet.com",
+                    content: "AI Tool Net",
+                }
         ],
     },
 ];

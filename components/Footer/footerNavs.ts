@@ -60,6 +60,11 @@ const Navs: any[] = [
                     href: "https://toolsfine.com",
                     title: "ToolsFine",
                     content: "ToolsFine",
+                },
+                {
+                    href: "https://aitoolsexplorer.org",
+                    title: "AI Tools Explorer",
+                    content: "AI Tools Explorer",
                 }
         ],
     },

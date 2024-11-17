@@ -216,9 +216,11 @@ const ImageGenerator = ({ user, generated }: any) => {
                                 htmlFor="prompts"
                                 className="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200"
                             >
-                                {t("formPromptsLabel")}
+                                {t("formPromptsLabel")}(
                             </label>
-
+                            <a href='/explore' className="hover:underline hover:text-indigo-600 text-yellow-600	" >
+                                Go explore
+                            </a><label className="text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">)</label>
                             <textarea
                                 id="prompts"
                                 className="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"

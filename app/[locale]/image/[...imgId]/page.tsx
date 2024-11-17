@@ -113,7 +113,7 @@ export default async function ImageDetailsPage({
                         aria-current="page"
                         title=""
                     >
-                        Application
+                        Image
                     </li>
                 </ol>
                 <div className="mx-auto mt-10">

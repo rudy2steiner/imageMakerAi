@@ -4,6 +4,8 @@
 
 import { useTranslations } from "next-intl";
 import { Carousel, Card } from "@/components/AppleCardsCarousel";
+import { MasonryPhotoAlbum } from "react-photo-album";
+import "react-photo-album/masonry.css";
 
 const CarouselSection = ({ gallery }: { gallery: any[] }) => {
     const t = useTranslations("Home");
@@ -58,7 +60,19 @@ const CarouselSection = ({ gallery }: { gallery: any[] }) => {
         // @ts-ignore
         <Card key={card.src} card={card} index={index} />
     ));
-
+    const photos = [
+          { src: "https://replicate.delivery/czjl/v8gV9dk8rjoWBJ7zeZZolfZC3ra2Zn5eD7yYfC5Lfw5IfGa8E/output.png", width: 800, height: 600 },
+          { src: "https://picsum.photos/id/1018/1920/1080", width: 1600, height: 900 },
+          { src: "https://pic.wela.tech/selected/8xmkkg9b69rm20cjzn8sf1dxzw.png", width: 500, height: 500 },
+          { src: "https://replicate.delivery/czjl/jxfigt1F5E0bA69T088pFh596wnXSGdQlTHfudO73mlUvoxTA/output.png", width: 600, height: 400 },
+          { src: "https://replicate.delivery/czjl/0hhokRGvCyqHJVL1fUx0E2VlED8AqNYAerVQI7HZfTqrKRjnA/output.png", width: 400, height: 600 },
+          { src: "https://replicate.delivery/czjl/v8gV9dk8rjoWBJ7zeZZolfZC3ra2Zn5eD7yYfC5Lfw5IfGa8E/output.png", width: 800, height: 600 },
+          { src: "https://picsum.photos/id/1018/1920/1080", width: 1600, height: 900 },
+          { src: "https://pic.wela.tech/selected/8xmkkg9b69rm20cjzn8sf1dxzw.png", width: 500, height: 500 },
+          { src: "https://replicate.delivery/czjl/jxfigt1F5E0bA69T088pFh596wnXSGdQlTHfudO73mlUvoxTA/output.png", width: 600, height: 400 },
+          { src: "https://replicate.delivery/czjl/0hhokRGvCyqHJVL1fUx0E2VlED8AqNYAerVQI7HZfTqrKRjnA/output.png", width: 400, height: 600 },
+        ];
+        // <MasonryPhotoAlbum photos={photos} />
     return (
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <h2 className="pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">

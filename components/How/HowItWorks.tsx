@@ -41,9 +41,9 @@ const HowItWorks = () => {
                                 <div className="relative space-y-8 py-12 p-8">
                                     {icons[String(idx)]}
                                     <div className="space-y-2">
-                                        <h5 className="text-xl font-semibold text-gray-800 dark:text-white transition">
+                                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white transition">
                                             {t(`howItWorks.steps.${idx}.title`)}
-                                        </h5>
+                                        </h3>
                                         <p className="text-gray-500 dark:text-gray-300">
                                             {t(
                                                 `howItWorks.steps.${idx}.description`
@@ -57,9 +57,9 @@ const HowItWorks = () => {
                             <div className="relative space-y-8 py-12 p-8">
                                 <Icons.Step2 />
                                 <div className="space-y-2">
-                                    <h5 className="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary">
                                         Deal Finalized
-                                    </h5>
+                                    </h3>
                                     <p className="text-gray-500 dark:text-gray-300">
                                         Once we agree on what to build, We will
                                         start working on it right away.
@@ -71,9 +71,9 @@ const HowItWorks = () => {
                             <div className="relative space-y-8 py-12 p-8">
                                 <Icons.Step3 />
                                 <div className="space-y-2">
-                                    <h5 className="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary">
                                         Product Delivery
-                                    </h5>
+                                    </h3>
                                     <p className="text-gray-500 dark:text-gray-300">
                                         We will develop your product MVP in 15
                                         days (more time required depending on
@@ -86,9 +86,9 @@ const HowItWorks = () => {
                             <div className="relative space-y-8 py-12 p-8">
                                 <Icons.Step4 />
                                 <div className="space-y-2">
-                                    <h5 className="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary">
                                         Celebrate your Launch
-                                    </h5>
+                                    </h3>
                                     <p className="text-gray-500 dark:text-gray-300">
                                         We love Celebrations. We will celebrate
                                         your launch on our Social Profiles.

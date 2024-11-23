@@ -24,7 +24,7 @@ const FooterSection = () => {
                                     {item.label}
                                 </p>
                                 {item.items.map((el: any, idx: number) => (
-                                    <div className="flex flex-col items-start mt-5 space-y-2" key={idx}>
+                                    <div className="flex flex-col items-start mt-2 space-y-2" key={idx}>
                                         <a
                                             href={el.href}
                                             className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"

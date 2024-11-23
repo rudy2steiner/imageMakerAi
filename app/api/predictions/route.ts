@@ -57,10 +57,11 @@ export async function POST(request: Request) {
     };
     //await replicate.run("black-forest-labs/" + fluxModel, { input });
     console.log('input:', input);
-    const prediction = await replicate.predictions.create({
-       model: "black-forest-labs/"+fluxModel,
-       input
-    });
+    const prediction
+    // const prediction = await replicate.predictions.create({
+    //   model: "black-forest-labs/"+fluxModel,
+    //   input
+    // });
     // handle replicate / fal ... api
     console.log("Replicate prediction res:", prediction);
     const generationRecord = {

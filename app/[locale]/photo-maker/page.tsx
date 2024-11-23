@@ -6,7 +6,7 @@ import { getUserInfo } from "@/models/user";
 import { queryGenerationByUser } from "@/models/generation";
 import FooterSection from "@/components/Footer/FooterSection";
 import { getTranslations } from "next-intl/server";
-import ImageGenerator from "@/components/Generator/ImageGenerator";
+import PhotoGenerator from "@/components/Generator/PhotoGenerator";
 import { languages, siteConfig } from "@/config/site";
 
 export async function generateMetadata({ params }: any) {
@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: any) {
         alternates: {
             canonical: `${siteConfig.url}${
                 params.locale === "en" ? "" : `/${params.locale}`
-            }/photo-maker`,
+            }/image-generator`,
             languages: {
                 ...Object.fromEntries(
                     languages.map((item) => [item.hrefLang, `/${item.lang}`])
                 ),
-                "x-default": "/photo-maker",
+                "x-default": "/image-generator",
             },
         },
     };
@@ -85,7 +85,7 @@ export default async function GenerationPage({
                 </div>
             </div>
 
-            <ImageGenerator user={session?.user} />
+            <PhotoGenerator user={session?.user} />
             {/* <UploadSection user={session?.user} generated={generated || []} /> */}
             <FooterSection />
             <Toaster position="top-center" richColors />

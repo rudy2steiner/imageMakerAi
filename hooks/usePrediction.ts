@@ -87,6 +87,22 @@ export function usePrediction() {
         // --------- mock end ---------
     };
 
+    const handlePhotoSubmit = async (files: File[]) => {
+            resetState();
+            console.log('files:'+files.length);
+            const formData = new FormData();
+            files.forEach((file) => {
+                formData.append('files', file);
+              });
+              const response1 = await to(
+              fetch("/api/photo", {
+                method: 'POST',
+                body: formData,
+              }));
+            //let prediction = await response1.json();
+            console.log('response:%c',prediction)
+        };
+
     return {
         prediction,
         error,
@@ -94,5 +110,6 @@ export function usePrediction() {
         setGeneratedList,
         generation,
         handleSubmit,
+        handlePhotoSubmit,
     };
 }

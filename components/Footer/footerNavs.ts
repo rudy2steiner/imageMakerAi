@@ -44,7 +44,7 @@ const Navs: any[] = [
             {
                 href: "https://jsonhome.com",
                 title: "JSON editor,formatter,comparator",
-                content: "JSON online",
+                content: "JSON Formatter",
             },
               {
                   href: "https://aiwith.me",
@@ -57,15 +57,20 @@ const Navs: any[] = [
                     content: "AI Tool Net",
                 },
                 {
-                    href: "https://toolsfine.com",
-                    title: "ToolsFine",
-                    content: "ToolsFine",
-                },
-                {
                     href: "https://aitoolsexplorer.org",
                     title: "AI Tools Explorer",
                     content: "AI Tools Explorer",
-                }
+                },
+                {
+                    href: "https://AIBest.Tools",
+                    title: "AI Best Tools",
+                    content: "AI Best Tools",
+                },
+                 {
+                     href: "https://toolsfine.com",
+                     title: "Tools Fine",
+                     content: "Tools Fine",
+                 }
         ],
     },
 ];

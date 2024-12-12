@@ -109,6 +109,7 @@ export default async function RootLayout({
                 ) : (
                     <></>
                 )}
+                <script defer data-domain="imagemakerai.co" src="https://app.pageview.app/js/script.js"></script>
                 <Analytics/>
                 <PrelineScript />
                 {/* <Script async src="https://platform.twitter.com/widgets.js" /> */}
